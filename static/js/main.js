@@ -1,7 +1,7 @@
 "use strict";
 
-var stepsContainers = document.querySelectorAll('.steps__container');
-stepsContainers.forEach(function (item) {
+var elementWithImage = document.querySelectorAll('[data-border]');
+elementWithImage.forEach(function (item) {
   var borderImgSrc = item.dataset.border;
   item.style.backgroundImage = "url(".concat(borderImgSrc, ")");
 });
@@ -50,6 +50,20 @@ document.querySelectorAll('.popup').forEach(function (popup) {
     if (e.target === this) {
       popupClose();
     }
+  });
+});
+document.querySelectorAll('.header-mobile-menu-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    if (!mobileMenu) return;
+    mobileMenu.classList.toggle('active');
+  });
+});
+document.querySelectorAll('.mobile-menu .nav__link').forEach(function (item) {
+  item.addEventListener('click', function () {
+    var mobileMenu = document.querySelector('.mobile-menu');
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('active');
   });
 });
 "use strict";
@@ -149,7 +163,7 @@ if (timerElement) {
 
 if (fixedLinkElement) {
   window.addEventListener('scroll', function () {
-    var scrollTop = getBodyScrollTop() + 120;
+    var scrollTop = getBodyScrollTop() + 320;
 
     if (scrollTop > partnersBlockOffsetTop) {
       fixedLinkElement.classList.add('active');
