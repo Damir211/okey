@@ -583,11 +583,15 @@ h6 {
   position: absolute;
 }
 
+:root {
+  --main-odometr-duration: 2s;
+}
+
 .odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transition: -webkit-transform var(--main-odometr-duration);
+  transition: -webkit-transform var(--main-odometr-duration);
+  transition: transform var(--main-odometr-duration);
+  transition: transform var(--main-odometr-duration), -webkit-transform var(--main-odometr-duration);
 }
 
 .odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
@@ -601,10 +605,10 @@ h6 {
 }
 
 .odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transition: -webkit-transform var(--main-odometr-duration);
+  transition: -webkit-transform var(--main-odometr-duration);
+  transition: transform var(--main-odometr-duration);
+  transition: transform var(--main-odometr-duration), -webkit-transform var(--main-odometr-duration);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -627,6 +631,8 @@ h6 {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-top: -93px;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -639,19 +645,25 @@ h6 {
 .draw .logo {
   position: absolute;
   left: 0;
-  top: 37px;
+  top: 1.927vw;
+  width: 10.885vw;
+  height: 3.594vw;
+}
+.draw .logo img {
+  width: 100%;
+  height: 100%;
 }
 .draw__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 122px 87px 85px 164px;
+  padding: 6.354vw 4.531vw 4.427vw 8.542vw;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -698,23 +710,23 @@ h6 {
   display: block;
 }
 .draw__results {
-  padding-left: 146px;
-  width: 1065px;
+  padding-left: 7.604vw;
+  width: 55.469vw;
 }
 .draw__overlay {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  width: 610px;
+  width: 31.771vw;
 }
 
 .drawlist__title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 38px;
+  font-size: 1.875vw;
+  line-height: 1.979vw;
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 35px;
+  margin-bottom: 1.823vw;
 }
 .drawlist__container {
   display: -webkit-box;
@@ -724,16 +736,16 @@ h6 {
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  font-size: 16.9991px;
-  line-height: 34px;
+  font-size: 0.833vw;
+  line-height: 1.771vw;
   color: #FFFFFF;
-  height: 450px;
-  margin-bottom: -50px;
+  height: 23.438vw;
+  margin-bottom: -2.604vw;
   overflow-y: auto;
-  padding-right: 10px;
+  padding-right: 0.521vw;
 }
 .drawlist__container::-webkit-scrollbar {
-  width: 5px;
+  width: 0.26vw;
   /* width of the entire scrollbar */
 }
 .drawlist__container::-webkit-scrollbar-track {
@@ -743,7 +755,7 @@ h6 {
 .drawlist__container::-webkit-scrollbar-thumb {
   background-color: #fff;
   /* color of the scroll thumb */
-  border-radius: 20px;
+  border-radius: 1.042vw;
   /* roundness of the scroll thumb */
 }
 .drawlist__container span {
@@ -757,31 +769,31 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 4.167vw;
 }
 .drawnumber__name {
-  width: 316px;
-  height: 78px;
+  width: 16.458vw;
+  height: 4.063vw;
   background: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0.417vw;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 78px;
+  font-size: 2.5vw;
+  line-height: 4.063vw;
   text-align: center;
   color: #1B2A37;
-  margin-right: 16px;
+  margin-right: 0.833vw;
 }
 .drawnumber__start {
-  width: 296px;
-  height: 78px;
+  width: 14.01vw;
+  height: 4.063vw;
   background: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0.417vw;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 81px;
+  font-size: 2.5vw;
+  line-height: 4.375vw;
   text-align: center;
   color: #1B2A37;
-  margin-right: 16px;
+  margin-right: 0.833vw;
 }
 .drawnumber .odometer-inside {
   display: -webkit-box;
@@ -789,20 +801,20 @@ h6 {
   display: flex;
 }
 .drawnumber .odometer-digit {
-  width: 61px;
-  height: 78px;
+  width: 3.177vw;
+  height: 4.063vw;
   background: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0.417vw;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 78px;
+  font-size: 2.5vw;
+  line-height: 4.063vw;
   text-align: center;
   color: #1B2A37;
-  margin-right: 5px;
+  margin-right: 0.26vw;
   display: block;
 }
 .drawnumber .odometer-digit:nth-child(2) {
-  margin-right: 15px;
+  margin-right: 0.781vw;
 }
 .drawnumber .odometer-value {
   width: 100%;
@@ -3058,6 +3070,10 @@ textarea::placeholder {
     height: 70px;
   }
 }
+#timer__days {
+  text-transform: none;
+}
+
 .winners {
   padding-top: 70px;
   padding-bottom: 60px;

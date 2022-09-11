@@ -62,14 +62,6 @@
                 <img src="./static/img/content/logo.png" alt="">
             </a>
             <div class="draw__container">
-                <div class="draw__block">
-                    <div class="draw__overlay">
-                        <img src="./static/img/content/draw-overlay.png" alt="">
-                    </div>
-                    <div class="draw__button" id="randomButton">
-                        Старт
-                    </div>
-                </div>
                 <div class="draw__results">
                     <div class="drawnumber">
                         <div class="drawnumber__name">
@@ -101,17 +93,36 @@
         </section>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                const randomButton = document.getElementById('randomButton');
+            window.onload = function() { 
+                
+                const odometerContainer = document.querySelector('.drawnumber__end');
+                const nameContainer = document.querySelector('.drawnumber__name');
+                const resultsContainer = document.querySelector('.drawlist__container');
+                let root = document.documentElement;
+                root.style.setProperty('--main-odometr-duration', '2s'); //скорость одометра
+                
         
-        
-                randomButton.addEventListener('click', function(){
-                    setPhoneWinner('Иван', '4421', randomButton);
+                //init
+                let odometerScript = new Odometer({
+                    el: odometerContainer,
+                    value: '0000',
+                    format: 'd',
+                    minIntegerLen: 4,
                 });
         
+        
+                odometerScript.update('4421');
+        
+                setTimeout(function(){
+                    resultsContainer.insertAdjacentHTML('beforeend', `<span>Иван, +7 ХХХ ХХХ 44 21</span>`);
+                    nameContainer.innerText = 'Иван';
+                },2000)
                 
-            });
+        
+            };
         </script>
+
+        <script src="./odometr/odometr.js"></script>
 
 
 
