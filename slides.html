@@ -329,82 +329,79 @@
                             <img src="./static/img/content/partner-47.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-48.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-49.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-50.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-51.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-52.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-53.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-54.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-55.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-56.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-57.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-58.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-59.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-60.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-61.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-62.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-63.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-64.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-65.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-66.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-67.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-68.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-69.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-70.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-71.png" alt="">
                         </a>
                         <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
-                        </a>
-                        <a href="#" target="_blank" class="partner">
-                            <img src="./static/img/content/partner-47.png" alt="">
+                            <img src="./static/img/content/partner-72.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -464,8 +461,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
             <div class="slides__bg">
                 <img src="./static/img/content/draw-bg1.png" alt="Фон" class="line-bg">
                 <img src="./static/img/content/draw-bg2.png" alt="Фон" class="gift-bg">
@@ -480,7 +478,10 @@
                     if(nextSlide) {
                         currentSlide.classList.remove('active');
                         nextSlide.classList.add('active');
-                    } 
+                    }else{
+                        document.querySelector('.slides__container').classList.add('hide');
+                        document.querySelector('.draw__container').classList.remove('hide');
+                    }
                 }else if(event.code == 'ArrowLeft'){
                     let currentSlide = document.querySelector('.slide.active');
                     let prevSlide = currentSlide.previousElementSibling;
@@ -488,7 +489,6 @@
                         currentSlide.classList.remove('active');
                         prevSlide.classList.add('active');
                     } 
-                    
                 }
             });
         </script>
